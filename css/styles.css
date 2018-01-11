@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* CSS Document 
+/* ########################### CUSTOME STYLE ########################## */
+
+body{
+	margin: 0;
+	background-color: #000;
+}
+.wrapper{
+overflow: hidden;
+position: relative;
+}
+.canvas-animation{
+	height: 100vh;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.canvas-animation .night-sky{
+	position: relative;
+	width:150vw;
+	height:150vw;
+	left:-37.5vw;
+	top: -37.5vw;
+	opacity: .7;
+	-webkit-animation: rotating 720s linear infinite;
+  	-moz-animation: rotating 720s linear infinite;
+  	-ms-animation: rotating 720s linear infinite;
+  	-o-animation: rotating 720s linear infinite;
+  	animation: rotating 720s linear infinite;
+}
+.canvas-animation .night-sky1{
+	background-image: url(../images/sky-night-star-milky-way.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.carousel img{
+  z-index: 5;
+  top:auto !important;
+  outline: none !important;
+}
+.landscape1{
+	bottom: -250px !important;
+}
+.landscape2{
+  bottom: -387px !important;
+}
+.landscape3{
+  bottom: -322px !important;
+}
+.landscape4{
+  bottom: -280px !important;
+}
+.landscape5{
+  bottom: -450px !important;
+}
+.landscape6{
+  bottom: -210px !important;
+}
+.landscape7{
+  bottom: -220px !important;
+}
+.landscape8{
+  bottom: -175px !important;
+}
+.landscape9{
+  bottom: -250px !important;
+}
+.landscape10{
+  bottom: -337px !important;
+}
+.slick-arrow{
+  position: fixed;
+  top:63%;
+  z-index: 999;
+  background-color: transparent;
+  font-size: 0;
+  border:none;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.slick-arrow:hover{
+  opacity: .8 !important;
+  cursor: pointer;
+}
+.slick-arrow.slick-prev{
+  position: absolute; 
+  transform: translate(0,-50%);  
+  left: -100px;
+  z-index: 1;
+  opacity: 0;
+}
+.slick-arrow.slick-prev::before{
+  content: "\f137";
+  font-family: 'FontAwesome';
+  font-size: 50px;
+  color:#fff;
+}
+.slick-arrow.slick-next{
+  position: absolute; 
+  transform: translate(0,-50%);  
+  right: -100px;
+  opacity: 0;
+}
+.slick-arrow.slick-next::before{
+  content: "\f138";
+  font-family: 'FontAwesome';
+  font-size: 50px;
+  color:#fff;
+}
+.wrapper:hover .slick-arrow.slick-prev{
+  opacity: .5;
+  left: 30px;
+}
+.wrapper:hover .slick-arrow.slick-next{
+  opacity: .5;
+  right: 30px;
+}
+.carousel-wrap{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width:100%;
+}
